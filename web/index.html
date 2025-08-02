@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <base href="/" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>
+      Bows & Ties India – Handmade Hairbands, Bows & Stylish Accessories
+    </title>
+
+    <meta
+      name="description"
+      content="Discover handmade bows, fashion ties, stylish hairbands, and accessories in India. Beautifully crafted designs for kids and adults with a focus on charm and creativity."
+    />
+    <meta
+      name="keywords"
+      content="bowsandties.in, handmade bows, hairbands, kids fashion, accessories, ties, women’s fashion, elegant hairbands, India, creative fashion, stylish accessories"
+    />
+
+    <!-- ✅ Icons -->
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="icons/Icon-192.png" />
+    <link rel="manifest" href="manifest.json" />
+    <meta name="referrer" content="no-referrer" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="Bows & Ties India" />
+
+    <meta
+      property="og:title"
+      content="Bows & Ties India – Handmade Hairbands, Bows & More"
+    />
+    <meta
+      property="og:description"
+      content="Explore handmade accessories like bows, ties, and hairbands. Stylish, affordable and designed for all ages. Made with love in India."
+    />
+    <meta property="og:image" content="https://bowsandties.in/splash.png" />
+    <meta property="og:url" content="https://bowsandties.in" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Bows & Ties India – Fashionable Handmade Accessories"
+    />
+    <meta
+      name="twitter:description"
+      content="Find creative, handcrafted bows, hairbands, and ties perfect for every look. Affordable and stylish accessories for everyone."
+    />
+    <meta name="twitter:image" content="https://bowsandties.in/splash.png" />
+
+    <meta
+      name="google-signin-client_id"
+      content="844750189631-dd0gcaqh4jgdi4q3g7as8n9h4eiurtvr.apps.googleusercontent.com"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Store",
+        "name": "Bows & Ties India",
+        "image": "https://bowsandties.in/splash.png",
+        "description": "Handmade bows, hairbands, ties, and accessories crafted with creativity and care. Stylish options for everyone.",
+        "url": "https://bowsandties.in",
+        "sameAs": [
+          "https://www.instagram.com/bowsandties2418",
+          "https://youtube.com/@bowsandties2418"
+        ]
+      }
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+        background-color: #ffffff;
+        font-family: Arial, sans-serif;
+      }
+
+      #loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        background-color: #ffffff;
+        position: fixed;
+        z-index: 9999;
+      }
+
+      #splashImage {
+        animation: slideIn 1s ease-out, slideOut 1s ease-in 3s forwards;
+        width: 50vw;
+        max-width: 300px;
+        height: auto;
+      }
+
+      @media (max-width: 768px) {
+        #splashImage {
+          width: 70vw;
+          max-width: 200px;
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+          opacity: 0;
+        }
+        to {
+          transform: translateX(0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes slideOut {
+        from {
+          transform: translateX(0);
+          opacity: 1;
+        }
+        to {
+          transform: translateX(100%);
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="loading">
+      <img src="splash.png" id="splashImage" />
+    </div>
+
+    <script>
+      setTimeout(() => {
+        const loader = document.getElementById("loading");
+        if (loader) loader.style.display = "none";
+      }, 4000);
+    </script>
+
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-storage-compat.js"></script>
+
+    <script type="module">
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.9.1/firebase-analytics.js";
+
+      const firebaseConfig = {
+        apiKey: "AIzaSyCWkjkn8vPDwRkQn9DiGXpPUFDacoPXAyI",
+        authDomain: "bowsandties-a06c2.firebaseapp.com",
+        projectId: "bowsandties-a06c2",
+        storageBucket: "bowsandties-a06c2.firebasestorage.app",
+        messagingSenderId: "844750189631",
+        appId: "1:844750189631:web:ae42c7b0b287cbb18e348a",
+        measurementId: "G-LC35JXZ0P5",
+      };
+
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="flutter_bootstrap.js" async></script>
+  </body>
+</html>
